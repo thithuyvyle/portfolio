@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index contact</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+            <a id="nom" href="index.html">
+                <span>Thi Thuy Vy LE </span>
+                <img id="iconeHome" src="images/icon Home.png" alt="iconeHome"></a>
+            <nav>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+                <span class="lang">
+                    <span id="langFR">FR</span> 
+                    <span id="langEN">| EN</span>
+                </span>
+            </nav>
+        </header>
+
+    <main id="mainContact">
+        <div id="contactDiv">
+            <section class="photo-titre">
+                <p class="titrePage">CONTACT</p>
+                <p class="sous-titre" id="info">Pour discuter de votre projet et obtenir un devis</p>
+            </section>
+            <form id="contactForm" novalidate>
+                <div id="formulaireDiv">
+                    <div>
+                        <label for="name">Nom, prénom</label>
+                        <input type="text" name="name" id="name" placeholder="Nom, prénom" required>
+                        <p id="nameP">*Veuillez entrer votre nom et prénom</p>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="adresse@domaine.com" required >
+                        <p id="emailP">*Veuillez entrer une adresse email valide</p>
+                    </div>
+                    <div>    
+                        <label for="tel">Téléphone (optionnel)</label>
+                        <input type="text" name="tel" id="tel" placeholder="+33 6 60 00 00 00">
+                    </div>
+                    <div>Comment puis-je vous aider?</div>
+                </div>
+        <div id="textareaDiv">
+            <div>
+                <p id="textareaP">*Veuillez entrer votre message</p>
+                <textarea id="textarea" name="textarea" placeholder="Merci de me donner le plus de détails possible afin de faciliter nos échanges" minlength="10" required></textarea>
+            </div>
+                <button id="buttonSend" type="submit">Envoyer</button>   
+        </div>
+        </form>
+    </div>    
+</main>
+
+    <footer id="footer"> 
+       <nav id="navFooter">
+        <div class="icons">
+            <a href="https://github.com/thithuyvyle"  target="_blank"><img src="images/github.png" alt="iconeGithub"></a>
+            <p>thithuyvyle</p>
+        </div>
+        <div class="icons"><a href="https://www.linkedin.com/in/thi-thuy-vy-le"  target="_blank"><img src="images/linkedin.png" alt="iconelinkedin"></a><p>thi-thuy-vy-le</p></div>
+        <div class="icons"><img src="images/email.png" alt="iconeemail"><p>thithuyvyle@gmail.com</p></div>
+       </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

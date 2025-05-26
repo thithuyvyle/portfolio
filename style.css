@@ -1,0 +1,555 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height:100%;
+}
+
+/**************** HEADER ******************/
+#header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;  
+    background-color: transparent;
+    position: absolute;
+    width:100%;
+    height: 6rem;
+    left: 0px;
+    top: 0px;     
+    padding: 0 2rem;   
+    box-sizing: border-box ;      
+}
+
+#nom {
+    display: flex;
+    align-items: center;  
+    text-decoration: none;
+    color: #2e2e2e;
+    font-family: "Figtree", sans-serif;
+    font-size: 2rem;
+}
+
+#iconeHome {
+    width: 2.5rem;           
+    height: 2.5rem;
+    margin-left: 0.5rem;  
+    object-fit: contain; 
+    position: relative;
+    top: -0.2rem;
+}
+
+nav{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.lang {
+    cursor:pointer;
+}
+
+nav a , .lang{
+    text-decoration: none;
+    color: #2e2e2e;
+    font-family: "Libre Baskerville", serif;
+    font-size:1.4rem;
+}
+
+
+/******************page INDEX *************************
+******************************************************/
+#mainIndex{
+    background-image: url("images/rocks.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 1440 / 1024; 
+    min-width: 390px;
+    min-height: 293px;
+    display:flex;
+}
+
+/************SECTION PHOTO TITRE*****************/
+.photo-titre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left:60px;
+    margin-top:50px;
+    gap:30px;
+}
+
+.titrePage{
+    color: #2e2e2e;
+    font-family: "Figtree", sans-serif;
+    font-size: 30px;
+}
+
+.sous-titre{
+    color: #2e2e2e;
+    font-family: "Libre Baskerville", serif;
+    font-size: 20px;
+}
+
+.savoir-plus{
+    align-self: center;     
+    width: fit-content; 
+    padding: 10px 20px;    
+    cursor: pointer;
+    font-family: "Libre Baskerville", serif;
+    background-color:white;
+    color:black;
+    font-size: 16px;
+    border: none;
+    border-radius:5px;
+    padding:10px auto;
+    transform:scale(1);
+    transition: transform 500ms;
+    white-space: nowrap; 
+}
+
+.savoir-plus:hover{
+    transform:scale(1.15);
+}
+
+/************SECTION A PROPOS *****************/
+#aPropos{
+    max-width:800px;
+    padding: 0px 20px 20px 20px;
+    margin:10px auto;
+    display:flex;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#texteMoi{
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+
+#titreApropos{
+    font-family: "Figtree", sans-serif;
+    font-size:22px;
+    margin: 20px auto;
+}
+
+#photoTTVL{
+    max-width: 150px;
+    height: auto;
+    border-radius: 50% / 50%;
+    object-fit: cover;
+    padding-bottom:20px;
+}
+
+#image-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#links a {
+    text-decoration: none;
+}
+
+/************ FOOTER *****************/
+#footer {
+    background-color: #23395B90;
+    display:flex;
+    justify-content: flex-end;
+    margin:0;
+    padding:0;
+}
+
+nav img{
+    cursor:pointer;
+    width:40px;
+    height:40px;
+}
+nav a{
+    padding:0;
+    margin:0
+}
+
+.icons{
+    text-align: center;
+    margin: 10px 0 10px 10px;
+}
+
+.icons p{
+    font-family: "Libre Baskerville", serif;
+    font-size: 20px;
+    display:none;
+}
+
+.icons:hover p{
+    display:block;
+}
+
+
+/******************page PORTFOLIO *************************
+******************************************************/
+#mainPortfolio{
+    background-image: url("images/pierres-zen-empilees-art-de-fond-de-sable-du-concept-d-equilibre.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 7000/ 4667;
+    min-width: 390px;
+    min-height: 260px;
+    display:flex;
+}
+
+#portfolio{
+    font-family: "Libre Baskerville", serif;
+    font-size: 13px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content:center;
+    align-items: center;
+}
+
+#portfolio p{
+    font-family: "Figtree", sans-serif;
+    font-size:22px;
+    margin:10px;
+}
+
+#buttons, #tous, #sites, #maquettes{
+    font-family: "Libre Baskerville", serif;
+    font-size: 14px;
+    margin: 10px;
+    padding:5px;
+}
+
+#galerie{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    margin:10px;
+    gap: 20px;
+}
+
+#galerie img {
+    max-width: 300px;
+}
+
+.projet {
+    transform:scale(0.85);
+    transition: transform 500ms;
+}
+
+.projet:hover {
+    transform: scale(1);
+}
+
+/******************page CONTACT*************************
+******************************************************/
+#mainContact{
+    background-image: url("images/assortiment-creatif-feng-shui.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    min-height:80vh;
+    min-width: 390px;
+    aspect-ratio: 7973/ 4485;
+    display: grid;
+    grid-template-columns:1;
+}
+
+#contactDiv{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    margin-top:30px;
+}
+
+#info{
+    margin-bottom:30px;
+}
+
+#contactForm p{
+    font-family: "Libre Baskerville", serif;
+    font-size: 15px;
+}
+
+#info{
+    text-align: center;
+    color:#2e2e2e;
+    padding-left:20px;
+}
+
+#formulaire{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+#formulaireDiv, #textareaDiv{
+    font-family: "Libre Baskerville", serif;
+    font-size: 20px;
+}
+
+#formulaireDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formulaireDiv div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%;
+    max-width: 350px; 
+    margin:0 0 15px 15px;
+}
+
+#formulaireDiv input{
+    font-family: "Libre Baskerville", serif;
+    font-size: 11px;
+    height:30px;
+    width: 100%;
+    max-width: 1050px;
+    margin-top:10px;
+    padding-left: 5px;
+    border-radius:10px;
+    border:none;
+}
+
+#formulaireDiv p, #textareaP{
+    display:none;
+    color:rgb(163, 32, 32);
+}
+
+#textareaP{
+    padding-left:40px;
+    padding-top:20px;
+}
+
+#textareaDiv{
+    background:transparent;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap:20px;
+    margin-top:50px;
+}
+
+#textarea{
+    font-family: "Libre Baskerville", serif;
+    font-size: 15px;
+    height:170px;
+    width: 1070px; 
+    padding:20px;
+    border-radius:10px;
+    border:none;
+}
+
+input:focus,textarea:focus{
+    outline:none;
+}
+
+#buttonSend{
+    font-family: "Libre Baskerville", serif;
+    font-size: 15px;
+    border-radius:10px;
+    border:none;
+    background-color:white;
+    width: fit-content; 
+    padding:10px;
+    margin-right:30px;
+    transform: scale(1);
+    transition: transform 500ms;
+}
+
+#buttonSend:hover{
+    transform: scale(1.15);
+}
+
+/*************** fenêtre pop up *******************************/
+#popupDiv {
+    position: fixed;   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Shift left & up by half its own size */
+    background: white;
+    border: 2px solid #2e2e2e;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#contentDiv{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#contentDiv p {
+    font-family: "Libre Baskerville", serif;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px auto;
+    text-align:center;
+}
+
+#contentDiv img{
+    width:50%;
+}
+/*********** MOBILE RESPONSIVE*********************/
+@media screen and (max-width: 768px) {
+/*header*/
+    #header {
+        height: 5rem;
+        padding: 0 1rem;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #nom {
+        font-size: 1rem;
+        margin-left: 0;
+        padding-bottom: 0.5rem;
+        justify-content: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-around;
+        padding-right: 0;
+    }
+
+    nav a, .lang {
+        margin: 0 0.8rem;
+        font-size: 0.8rem;
+    }
+/*accueil*/
+    .titrePage{
+        font-size:1.1rem;
+        
+    }
+    .sous-titre{
+        font-size:0.8rem;
+    }  
+    .savoir-plus{
+        font-size:0.6rem;
+    }
+
+    .photo-titre{
+        text-align: left; 
+        margin-top:20px;
+ 
+    }
+    #aPropos{
+        font-size:1.1rem;
+    }
+
+/* portfolio*/
+    #galerie {
+        grid-template-columns: 1fr;
+    }
+/*contact*/
+  #mainContact {
+    padding:20px;
+    grid-template-columns: 1fr;
+    aspect-ratio: auto; 
+    min-height:auto;
+  }
+
+  #contactDiv{
+    height: auto;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+#info {
+    font-size: 14px;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  #formulaireDiv, #textareaDiv {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #formulaireDiv div {
+    font-size:16px;
+    width: 100%;
+    margin: 10px 0;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+ #formulaireDiv input,
+  #textarea {
+    width: 90%;
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+   #textareaDiv {
+    margin-top: 30px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #textarea {
+    height: 150px;
+    padding: 10px;
+  }
+
+  #textareaP {
+    padding: 0;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  #buttonSend {
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+/*footer*/
+  #footer{
+    margin:0;
+    padding:0;
+  }
+
+  .icons img {
+    width: 24px;
+    height: 24px;
+  }
+
+   .icons p {
+    display:block;
+    font-size:15px;
+}
+}
