@@ -3,38 +3,6 @@ function scrollToApropos() {
     document.querySelector("#texteMoi").scrollIntoView({ behavior: 'smooth' });
 }
 
-  /** localStorage langues **/
-let boutonFR = document.getElementById("langFR");
-let boutonEN = document.getElementById("langEN");
-
-function appliquerLangue(langue) {
-    if (langue === "EN") {
-    document.querySelector("#titreDev").textContent="Full Stack Developer In Paris";
-    document.querySelector("#soustitreDev").textContent="Creating Websites To Reflect You";
-    document.querySelector(".savoir-plus").textContent="Read More";
-}else{
-    document.querySelector("#titreDev").textContent="Développeuse full stack en région parisienne";
-    document.querySelector("#soustitreDev").textContent="Création de sites web à votre image";
-    document.querySelector(".savoir-plus").textContent="En savoir plus";
-    }
-}
-
-const langSave = localStorage.getItem("langue"); // récupère valeur depuis stockage
-if (langSave) {                                
-    appliquerLangue(langSave);
-} else {
-    appliquerLangue("FR");                          
-}
-
-boutonEN.addEventListener("click", function () {
-    appliquerLangue("EN");
-    localStorage.setItem("langue", "EN");  // mémorise préférence ds stockage à chaque clic
-});
-boutonFR.addEventListener("click", function () {
-    appliquerLangue("FR");
-    localStorage.setItem("EN", "FR");
-});
-
 /******************** PAGE PORTFOLIO ***********/
 function scrollToProjets() {
     document.querySelector("#portfolio").scrollIntoView({ behavior: 'smooth' });
@@ -147,3 +115,34 @@ let textarea= document.getElementById("textarea");
 let textareaP=document.getElementById("textareaP");
 
 
+/** localStorage langues **/
+let boutonFR = document.getElementById("langFR");
+let boutonEN = document.getElementById("langEN");
+
+function appliquerLangue(langue) {
+    if (langue === "EN") {
+    document.querySelector("#titreDev").textContent="Full Stack Developer In Paris";
+    document.querySelector("#soustitreDev").textContent="Creating Websites To Reflect You";
+    document.querySelector(".savoir-plus").textContent="Read More";
+}else{
+    document.querySelector("#titreDev").textContent="Développeuse full stack en région parisienne";
+    document.querySelector("#soustitreDev").textContent="Création de sites web à votre image";
+    document.querySelector(".savoir-plus").textContent="En savoir plus";
+    }
+}
+
+const langSave = localStorage.getItem("langue"); // récupère valeur depuis stockage
+if (langSave) {                                
+    appliquerLangue(langSave);
+} else {
+    appliquerLangue("FR");                          
+}
+
+boutonEN.addEventListener("click", function () {
+    appliquerLangue("EN");
+    localStorage.setItem("langue", "EN");  // mémorise préférence ds stockage à chaque clic
+});
+boutonFR.addEventListener("click", function () {
+    appliquerLangue("FR");
+    localStorage.setItem("EN", "FR");
+});
