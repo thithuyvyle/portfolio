@@ -24,23 +24,23 @@
 
     <main id="mainIndex">
         <section class="photo-titre">
-            <p class="titrePage" id="titreDev">Développeuse full stack en région parisienne</p>
-            <p class="sous-titre" id="soustitreDev">Création de sites web à votre image</p>
-            <button onclick="scrollToApropos()" class="savoir-plus">En savoir plus</button>
+            <p class="titrePage" id="titreDev"></p>
+            <p class="sous-titre" id="soustitreDev"></p>
+            <button onclick="scrollToApropos()" class="savoir-plus" id="savoirPlus"></button>
         </section>
      </main>
 
     <section id="aPropos">
         <div id="texteMoi">
-            <span id="titreApropos">Jeune développeuse web</span>
-            <p id="paragraphe1">Initialement manipulatrice en radiothérapie, j’ai découvert un très fort intérêt pour le développement en 2024, lorsque j’ai collaboré étroitement avec les développeurs de logiciels de radiothérapie.<br><br>Cette expérience a été un déclic : elle m’a poussée à opérer un tournant majeur dans ma carrière. <br><br> En 2025, j’ai donc entamé une reconversion complète en suivant une formation à l’école Descodeuses, afin de devenir développeuse web.</p>
+            <span id="titreApropos"></span>
+            <p id="paragraphe1"></p>
         </div>
         <div>
         <div id="image-links">
             <img src="images/photoTTVL.jpg" ; id="photoTTVL" alt="photoTTVL">
             <div id="links">    
-                <a class="savoir-plus" href="portfolio.html">Mes projets</a>
-                <a class="savoir-plus" href="https://www.doyoubuzz.com/thi-thuy-vy-le" target="_blank">Mon CV en ligne</a>
+                <a id="myProjects" class="savoir-plus" href="portfolio.html"></a>
+                <a id="myCV" class="savoir-plus" href="https://www.doyoubuzz.com/thi-thuy-vy-le" target="_blank"></a>
             </div>
         </div>
     </section>    
@@ -61,6 +61,6 @@
        </nav>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

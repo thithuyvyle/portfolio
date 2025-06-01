@@ -1,0 +1,47 @@
+{
+  "FR": {
+    "titreDev": "Développeuse full stack en région parisienne",
+    "soustitreDev": "Création de sites web à votre image",
+    "savoirPlus": "En savoir plus",
+    "titreApropos": "Développeuse web en reconversion",
+    "paragraphe1":"Initialement manipulatrice en radiothérapie, j’ai découvert un très fort intérêt pour le développement en 2024, lorsque j’ai collaboré étroitement avec les développeurs de logiciels de radiothérapie.Cette expérience a été un déclic : elle m’a poussée à opérer un tournant majeur dans ma carrière. En 2025, j’ai donc entamé une reconversion complète en suivant une formation à l’école Descodeuses, afin de devenir développeuse web.",
+    "myProjects": "Mes projets",
+    "myCV":"Mon CV en ligne",
+    "tous": "Tous",
+    "sites": "Sites web",
+    "maquettes":"Maquettes",
+    "info":"Pour discuter de votre projet et obtenir un devis",
+    "nomsLabel":"Nom, prénom",
+    "nameP":"*Veuillez entrer votre nom et prénom",
+    "emailP":"*Veuillez entrer une adresse email valide",
+    "telLabel":"Téléphone (optionnel)",
+    "helpYou":"Comment puis-je vous aider?",
+    "textareaP": "*Veuillez entrer votre message",
+    "buttonSend":"Envoyer",
+    "placeholderName":"nom, prénom",
+    "placeholderTextarea":"Merci de me donner le plus de détails possible afin de faciliter nos échanges"
+},
+
+  "EN": {
+    "titreDev": "Full Stack Developer In Paris",
+    "soustitreDev": "Creating Websites To Reflect You",
+    "savoirPlus": "Read More",
+    "titreApropos": "Retraining as a web developer",
+    "paragraphe1":"Initially a radiation therapist, I discovered a strong interest in development in 2024, when I worked closely with software developers, an experience that triggered a major change in my career.  So, in 2025, I embarked on a complete conversion by training at the Descodeuses school, to become a web developer.",
+    "myProjects": "My Projects",
+    "myCV":"My Online CV",
+    "tous": "All",
+    "sites": "Websites",
+    "maquettes":"Models",
+    "info":"To discuss your project and obtain a quote",
+    "nomsLabel":"Last Name, First Name",
+    "nameP":"*Please enter your last name and first name",
+    "emailP":"*Please enter a valid email address",
+    "telLabel":"Phone number (optional)",
+    "helpYou":"How can I help you?",
+    "textareaP": "*Please enter a message",
+    "buttonSend":"Send",
+    "placeholderName":"Last name, First Name",
+    "placeholderTextarea":"Please give me as many details as possible to facilitate our discussions."
+}
+}

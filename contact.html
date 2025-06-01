@@ -15,7 +15,10 @@
             <nav>
                 <a href="portfolio.html">Portfolio</a>
                 <a href="contact.html">Contact</a>
-           
+                <span class="lang">
+                    <span id="langFR">FR</span> 
+                    <span id="langEN">| EN</span>
+                </span>
             </nav>
         </header>
 
@@ -23,32 +26,32 @@
         <div id="contactDiv">
             <section class="photo-titre">
                 <p class="titrePage">CONTACT</p>
-                <p class="sous-titre" id="info">Pour discuter de votre projet et obtenir un devis</p>
+                <p class="sous-titre" id="info"></p>
             </section>
             <form id="contactForm" novalidate>
                 <div id="formulaireDiv">
                     <div>
-                        <label for="name">Nom, prénom</label>
+                        <label for="name" id="nomsLabel"></label>
                         <input type="text" name="name" id="name" placeholder="Nom, prénom" required>
-                        <p id="nameP">*Veuillez entrer votre nom et prénom</p>
+                        <p id="nameP"></p>
                     </div>
                     <div>
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="adresse@domaine.com" required >
-                        <p id="emailP">*Veuillez entrer une adresse email valide</p>
+                        <p id="emailP"></p>
                     </div>
                     <div>    
-                        <label for="tel">Téléphone (optionnel)</label>
+                        <label for="tel" id="telLabel"></label>
                         <input type="text" name="tel" id="tel" placeholder="+33 6 60 00 00 00">
                     </div>
-                    <div>Comment puis-je vous aider?</div>
+                    <div id="helpYou"></div>
                 </div>
         <div id="textareaDiv">
             <div>
-                <p id="textareaP">*Veuillez entrer votre message</p>
+                <p id="textareaP"></p>
                 <textarea id="textarea" name="textarea" placeholder="Merci de me donner le plus de détails possible afin de faciliter nos échanges" minlength="10" required></textarea>
             </div>
-                <button id="buttonSend" type="submit">Envoyer</button>   
+                <button id="buttonSend" type="submit"></button>   
         </div>
         </form>
     </div>    
@@ -65,6 +68,6 @@
        </nav>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

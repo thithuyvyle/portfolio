@@ -1,3 +1,4 @@
+
 /******************** PAGE ACCUEIL ***********/
 function scrollToApropos() {
     document.querySelector("#texteMoi").scrollIntoView({ behavior: 'smooth' });
@@ -8,141 +9,172 @@ function scrollToProjets() {
     document.querySelector("#portfolio").scrollIntoView({ behavior: 'smooth' });
 }
 /* filtrage projets*/
-let projets=[
-    { nom: "Blog Voyage", descriptif: "Blog voyage", categorie: "site", image:"images/coming-soon.jpg" },
-    { nom: "Blog Mode", descriptif: "Blog Mode", categorie: "site",image:"images/coming-soon.jpg" },
-    { nom: "Application Mobile", descriptif: "Application Mobile", categorie: "site",image:"images/coming-soon.jpg"},
-    { nom: "À venir", descriptif: "Création maquette", categorie: "maquette",image:"images/coming-soon.jpg" },
+let projets = [
+    { nom:  { FR: "Blog Voyage", EN: "Travel Blog" }, descriptif:  { FR: "Blog Voyage", EN: "Travel Blog" }, categorie: "site", image: "images/coming-soon.jpg" },
+    { nom: {FR:"Blog Mode" , EN: "Fashion Blog"}, descriptif: {FR:"Blog Mode" , EN: "Fashion Blog"}, categorie: "site", image: "images/coming-soon.jpg" },
+    { nom: {FR:"Application Mobile" , EN: "Mobile App"}, descriptif: {FR:"Application Mobile" , EN: "Mobile App"}, categorie: "site", image: "images/coming-soon.jpg" },
+    { nom: {FR:"À venir" , EN: "Coming Soon"}, descriptif: {FR:"Création Maquette" , EN: "Wireframe Design"}, categorie: "maquette", image: "images/coming-soon.jpg" },
 ];
 
 let galerie = document.getElementById("galerie");
-function ajouterProjets(filteredProjets) {
-  // Clear the gallery
-  galerie.innerHTML = "";
-  filteredProjets.forEach(proj => {
-    const div = document.createElement("div");
-    div.className = "projet";
-    div.innerHTML = 
-    `<h3>${proj.nom}</h3>
-    <img src=${proj.image}></img>
-    <p>${proj.descriptif}</p>`;
-    galerie.appendChild(div);
-  });
+function ajouterProjets(filteredProjets, langue) {
+       galerie.innerHTML = "";// Clear the gallery +++
+    filteredProjets.forEach(proj => {
+        const div = document.createElement("div");
+        div.className = "projet";
+        div.innerHTML =
+            `<h3>${proj.nom[langue]}</h3>
+    <img src=${proj.image} alt="${proj.nom[langue]}"></img>
+    <p>${proj.descriptif[langue]}</p>`;
+        galerie.appendChild(div);
+    });
 }
 
 // All
 function showAllProjets() {
-  ajouterProjets(projets);
+    const lang = localStorage.getItem("langue") || "FR";
+    ajouterProjets(projets, lang);
 }
 
 // Show only sites
 function showSites() {
+    const lang = localStorage.getItem("langue") || "FR";
     const sites = projets.filter(p => p.categorie === "site");
-    ajouterProjets(sites);
+    ajouterProjets(sites, lang);
 }
 
 // Show only maquettes
 function showMaquettes() {
+    const lang = localStorage.getItem("langue") || "FR";
     const maquettes = projets.filter(p => p.categorie === "maquette");
-    ajouterProjets(maquettes);
+    ajouterProjets(maquettes, lang);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  showAllProjets(); // show all initially
+    if (galerie){
+    showAllProjets();
+} // show all initially
 });
 
 
 /******************** PAGE CONTACT ***********/
 // Affichage messages erreur
+let nameInput = document.getElementById("name");
+let nameP = document.getElementById("nameP");
+let emailInput = document.getElementById("email");
+let emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+let emailP = document.getElementById("emailP");
+let textarea = document.getElementById("textarea");
+let textareaP = document.getElementById("textareaP");
+
 document.addEventListener('DOMContentLoaded', () => {
-  const formulaire = document.getElementById("contactForm");
-  formulaire.addEventListener("submit", function(event) {
-    event.preventDefault();
-    let isValid = true;
+    const formulaire = document.getElementById("contactForm");
+    if (formulaire) {
 
-    if (nameInput.value.trim() === ""){
-        nameP.style.display="block";
-        isValid =  false;
-    }else{
-        nameP.style.display="none";
-    }
+        formulaire.addEventListener("submit", function (event) {
+            event.preventDefault();
+            let isValid = true;
 
-    if (emailInput.value === "" || !emailformat.test(emailInput.value)){
-        emailP.style.display="block";
-        isValid =  false;
-    }else {
-        emailP.style.display="none";
-    }
+            if (nameInput.value.trim() === "") {
+                nameP.style.display = "block";
+                isValid = false;
+            } else {
+                nameP.style.display = "none";
+            }
 
-    if (textarea.value === "" || textarea.value.length<10){
-        textareaP.style.display="block";
-        isValid =  false;
-    }else{
-        textareaP.style.display="none";
+            if (emailInput.value === "" || !emailformat.test(emailInput.value)) {
+                emailP.style.display = "block";
+                isValid = false;
+            } else {
+                emailP.style.display = "none";
+            }
+
+            if (textarea.value === "" || textarea.value.length < 10) {
+                textareaP.style.display = "block";
+                isValid = false;
+            } else {
+                textareaP.style.display = "none";
+            }
+            if (isValid) {
+                showPopup();
+                formulaire.reset();
+            }
+        })
     }
-    if (isValid){
-        showPopup();
-        formulaire.reset();
-    }}  )   
-  });
+});
 
 // Affichage popup 
 function showPopup() {
     const popup = document.createElement("div");
-    popup.id="popupDiv";
+    popup.id = "popupDiv";
     const content = document.createElement("div");
-    content.id="contentDiv";
+    content.id = "contentDiv";
     const popupMessage = document.createElement("p");
     popupMessage.textContent = "Message envoyé !";
     const gif = document.createElement("img");
     gif.src = "https://media.tenor.com/6oWcNgJ5EKMAAAAi/paper-plane-flying.gif";
-    gif.alt="avion volant";
-    const popupMessage2= document.createElement("p");
+    gif.alt = "avion volant";
+    const popupMessage2 = document.createElement("p");
     popupMessage2.textContent = "(cliquez pour fermer)";
-// en cliquant ds tte la fenêtre, pop up se ferme:
-    content.onclick = () => document.body.removeChild(popup); 
+    // en cliquant ds tte la fenêtre, pop up se ferme:
+    content.onclick = () => document.body.removeChild(popup);
     content.append(popupMessage, gif, popupMessage2);
     popup.appendChild(content);
     document.body.appendChild(popup);
 }
 
-let nameInput= document.getElementById("name");
-let nameP=document.getElementById("nameP");
-let emailInput= document.getElementById("email");
-let emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-let emailP=document.getElementById("emailP");
-let textarea= document.getElementById("textarea");
-let textareaP=document.getElementById("textareaP");
-
 
 /** localStorage langues **/
-let boutonFR = document.getElementById("langFR");
-let boutonEN = document.getElementById("langEN");
+document.addEventListener("DOMContentLoaded", () => {
+function setText(id, value) {
+        const element = document.getElementById(id.startsWith("#") ? id.slice(1) : id);
+        if (element && typeof value === "string") {
+            element.textContent = value;
+        }
+    }
+
+let traductions = {};
+
+fetch("lang.json")
+    .then(response => response.json())
+    .then(data => {
+        traductions = data;
+        const langSave = localStorage.getItem("langue") || "FR";
+        appliquerLangue(langSave);
+    });
 
 function appliquerLangue(langue) {
-    if (langue === "EN") {
-    document.querySelector("#titreDev").textContent="Full Stack Developer In Paris";
-    document.querySelector("#soustitreDev").textContent="Creating Websites To Reflect You";
-    document.querySelector(".savoir-plus").textContent="Read More";
-}else{
-    document.querySelector("#titreDev").textContent="Développeuse full stack en région parisienne";
-    document.querySelector("#soustitreDev").textContent="Création de sites web à votre image";
-    document.querySelector(".savoir-plus").textContent="En savoir plus";
-    }
+    const trad = traductions[langue];
+    if (!trad) return; // sécurité en cas d'erreur
+
+    setText("titreDev", trad.titreDev);
+    setText("#soustitreDev", trad.soustitreDev);
+    setText("#savoirPlus", trad.savoirPlus);
+    setText("#titreApropos", trad.titreApropos);
+    setText("#paragraphe1", trad.paragraphe1);
+    setText("#myProjects", trad.myProjects);
+    setText("#myCV", trad.myCV);
+    setText("#tous", trad.tous);
+    setText("#sites", trad.sites);
+    setText("#maquettes", trad.maquettes);
+    setText("#info", trad.info);
+    setText("#nomsLabel", trad.nomsLabel);
+    setText("#nameP", trad.nameP)
+    setText("#emailP", trad.emailP);
+    setText("#telLabel", trad.telLabel);
+    setText("#helpYou", trad.helpYou);
+    setText("#textareaP", trad.textareaP);
+    setText("#buttonSend", trad.buttonSend);
+//placeholder
+    if (nameInput) nameInput.placeholder = trad.placeholderName;
+    if (textarea) textarea.placeholder= trad.placeholderTextarea;
+
+    localStorage.setItem("langue", langue); // sauvegarde à chaque appel
 }
 
-const langSave = localStorage.getItem("langue"); // récupère valeur depuis stockage
-if (langSave) {                                
-    appliquerLangue(langSave);
-} else {
-    appliquerLangue("FR");                          
-}
+let boutonFR = document.getElementById("langFR");
+let boutonEN = document.getElementById("langEN");
+boutonFR.addEventListener("click", () => appliquerLangue("FR"));
+boutonEN.addEventListener("click", () => appliquerLangue("EN"));
+})
 
-boutonEN.addEventListener("click", function () {
-    appliquerLangue("EN");
-    localStorage.setItem("langue", "EN");  // mémorise préférence ds stockage à chaque clic
-});
-boutonFR.addEventListener("click", function () {
-    appliquerLangue("FR");
-    localStorage.setItem("EN", "FR");
-});
