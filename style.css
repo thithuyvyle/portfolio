@@ -419,7 +419,7 @@ input:focus,textarea:focus{
 #contentDiv img{
     width:50%;
 }
-/*********** MOBILE RESPONSIVE*********************/
+/*********** TABLETTE RESPONSIVE*********************/
 @media screen and (max-width: 768px) {
 /*header*/
     #header {
@@ -552,4 +552,84 @@ input:focus,textarea:focus{
     display:block;
     font-size:15px;
 }
+}
+
+/************ MOBILE ***********************/
+@media screen and (max-width: 500px) {
+  #header {
+    padding: 0.5rem;
+    height: auto;
+    display:flex;
+    align-items: flex-start;
+    justify-items: flex-start;
+  }
+
+  #nom {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  nav a, .lang {
+    font-size: 0.7rem;
+    margin: 0.2rem 0;
+  }
+
+  .titrePage {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .sous-titre {
+    font-size: 0.7rem;
+  }
+
+  .savoir-plus {
+    font-size: 0.7rem;
+  }
+
+  .photo-titre {
+    margin-top: 10px;
+  }
+
+  #paragraphe1,#titreApropos {
+    font-size: 0.6rem;
+    margin:10px;
+  }
+
+  #mainContact {
+    padding: 10px;
+  }
+
+  #formulaireDiv input,
+  #textarea {
+    font-size: 12px;
+  }
+
+  #formulaireDiv div {
+    font-size: 14px;
+  }
+
+  #textareaP {
+    font-size: 11px;
+  }
+
+  #buttonSend {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icons p {
+    font-size: 13px;
+  }
 }
