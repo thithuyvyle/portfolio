@@ -18,6 +18,13 @@ let projets = [
         link: "https://thithuyvyle.github.io/portfolio_exercise/"
     },
     {
+        nom: { FR: "Pokedex", EN: "Pokedex" },
+        descriptif: { FR: "Exercice: appel d'API Pokemon", EN: "Exercise: Pokemon API call" },
+        categorie: "site",
+        image: "images/pokemon.jpg",
+        link: "https://thithuyvyle.github.io/pokemon_API/",
+    },
+    {
         nom: { FR: "Maquette Portfolio", EN: "Portfolio Wireframe" },
         descriptif: { FR: "Maquette du portfolio", EN: "Portfolio wireframe" },
         categorie: "maquette",
